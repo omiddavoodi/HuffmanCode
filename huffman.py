@@ -105,7 +105,7 @@ def main(fname):
     contents = fi.read()
     fi.close()
 
-    if (chr(contents[0]) == "O" and chr(contents[1]) == "C" and contents[2] == "F"):
+    if (not (chr(contents[0]) == "O" and chr(contents[1]) == "C" and chr(contents[2]) == "F")):
         nli = []
         li = findcharcounts(contents)
         print ("Char counts found")
